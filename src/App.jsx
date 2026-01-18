@@ -8,8 +8,6 @@ import About from "./pages/About";
 import Events from "./pages/Events";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
      <div id="bottomNav">
