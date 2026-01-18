@@ -3,9 +3,9 @@ import LOGO from './assets/LOGO.svg'
 import LOGOpic from './assets/logopic.jpeg'
 import './App.css'
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/home";
-import About from "./pages/about";
-import Events from "./pages/events";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Events from "./pages/Events";
 
 function App() {
   const [count, setCount] = useState(0)
