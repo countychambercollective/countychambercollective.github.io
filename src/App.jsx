@@ -18,7 +18,7 @@ function App() {
           <nav>
             <Link to="/">Home</Link> |{" "}
             <Link to="/events">Upcoming Events</Link> |{" "}
-          <Link to="/about">About</Link> |{" "}
+            <Link to="/about">About</Link> |{" "}
           </nav>
 
           <Routes>
