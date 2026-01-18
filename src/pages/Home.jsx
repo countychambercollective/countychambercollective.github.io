@@ -3,7 +3,7 @@ import './App.css';
 
 function Home() {
     return (
-    <    <>
+        <>
             <div>
                 <h1>County Chamber Collective</h1>
 
@@ -27,7 +27,7 @@ function Home() {
             </div>
             </div>
         </>
-    ) >
+    ) 
 }
 
 export default Home;
