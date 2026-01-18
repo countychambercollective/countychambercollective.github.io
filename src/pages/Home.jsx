@@ -1,7 +1,13 @@
 import React from "react";
+import './App.css';
 
-function Home() {
-    return <h1>County Chamber Collective Home Page</h1>;
+function home() {
+    return (
+        <>
+            <h1>County Chamber Collective Home Page</h1>;
+
+        </>
+    ) 
 }
 
-export default Home;
+export default home;
