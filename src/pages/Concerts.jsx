@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 
-function Events() {
+function Concerts() {
     return (
         <>
             <div>
@@ -30,4 +30,4 @@ function Events() {
     ) 
 }
 
-export default Events;
+export default Concerts;
