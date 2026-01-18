@@ -3,9 +3,9 @@ import LOGO from './assets/LOGO.svg'
 import LOGOpic from './assets/logopic.jpeg'
 import './App.css'
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
-import home from "./pages/home";
-import about from "./pages/about";
-import events from "./pages/events";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Events from "./pages/events";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,9 +22,9 @@ function App() {
           </nav>
 
           <Routes>
-            <Route path="/" element={<home />} />
-            <Route path="/events" elements={<events />} />
-            <Route path="/about" element={<about />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/events" elements={<Events />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </Router>
       </div>

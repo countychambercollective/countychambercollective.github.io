@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 
-function events() {
+function Events() {
     return (
         <>
         <main>
@@ -31,4 +31,4 @@ function events() {
     ) 
 }
 
-export default events;
+export default Events;

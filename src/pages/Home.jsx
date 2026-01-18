@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 
-function home() {
+function Home() {
     return (
         <>
             <main>
@@ -30,4 +30,4 @@ function home() {
     ) 
 }
 
-export default home;
+export default Home;

@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 
-function about() {
+function About() {
     return (
         <main>
         <h1>About the Collective</h1>
@@ -33,4 +33,4 @@ function about() {
     ) 
 }
 
-export default about;
+export default About;
