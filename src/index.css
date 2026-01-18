@@ -15,6 +15,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container {
+  display: inline-flex;
+  width: 100vw;
+}
+
+#bottomNav {
+  position:absolute;
+  bottom: 0;
+  height: 15vh;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
