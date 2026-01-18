@@ -4,7 +4,7 @@ import './App.css';
 function Events() {
     return (
         <>
-        <main>
+        <div>
              <h1>Upcoming and Previous Events</h1>
 
             <p>
@@ -25,7 +25,7 @@ function Events() {
                 <h2>Get Involved</h2>
                 <button>Become a Member</button>
             </section>
-            </main>
+            </div>
 
         </>
     ) 

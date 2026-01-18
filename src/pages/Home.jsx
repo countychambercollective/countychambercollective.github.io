@@ -4,7 +4,7 @@ import './App.css';
 function Home() {
     return (
         <>
-            <main>
+            <div>
                 <h1>County Chamber Collective</h1>
 
                  <p>
@@ -25,7 +25,7 @@ function Home() {
                 <h2>Get Involved</h2>
                 <button>Become a Member</button>
             </div>
-            </main>
+            </div>
         </>
     ) 
 }

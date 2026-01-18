@@ -3,7 +3,7 @@ import './App.css';
 
 function About() {
     return (
-        <main>
+        <div>
         <h1>About the Collective</h1>
 
         <p>
@@ -29,7 +29,7 @@ function About() {
         </ul>
         <button>Become a Member</button>
       </div>
-    </main>
+    </div>
     ) 
 }
 
