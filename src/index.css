@@ -6,15 +6,10 @@
   font-weight: 400;
 
   display: flex;
-  flex-direction: row;
 
-  background-image: url(./assets/treebackground.jpeg);
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat;
   color-scheme: light dark;
   color: rgba(27, 3, 3, 0.87);
-  background-color: rgb(105, 138, 124);
+  background-color: #A62B44;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,105 +20,105 @@
 #mainContent {
   display: flex;
   height: 100vh;
-  width: 65%;
-  position: absolute;
-  right: 0; top: 5; bottom: 5; 
-  background-color: rgba(180, 103, 189, 0.6);
+  width: 91.75vw;
+  position: relative;
+  background-color: #2BA68D;
   backdrop-filter: blur(15px);
-  border-radius: 10px;
   box-shadow: black;
   border-color:rgba(255, 255, 255, 0.794);
   border-width: thick;
   flex: 1 1 auto;
   padding: 15px;
+  z-index: -1;
+  border-top-left-radius: 25px;
 }
 
 #textMain {
   padding: 50px;
-  margin: 50px;
 }
 
-#bottomNav h1 {
-  flex: 1 1 auto;
-  padding: 10px;
-  align-content: center;
-  text-align: center;
-}
+
 
 #bottomNav {
-  background-color: rgba(112, 189, 103, 0.5);
   backdrop-filter: blur(9px);
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(245, 245, 245, 0.336);
-  border-width: 1px;
-  border-color: rgba(255, 255, 255, 0.5);
-  border-style: solid;
-  position: absolute;
+  border-bottom: #A62B44;
+;
+  border-bottom-style: solid;
+  border-width: 5px;
+  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-end;
-  height: 100%;
-  width: 25%;
-}
-
-#bottomNav img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-#bottomNav h1 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  color: rgba(0, 0, 0, 0)
-}
-#navLinks {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 2;
-  flex-shrink: 1;
-  margin: 10%;
-  padding: 10px;
-  border-radius: 5%;
-  background-color: rgba(180, 103, 189, 0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px white;
-  border-color:rgba(255, 255, 255, 0.794);
-  border-width: 10px;
-  overflow-wrap: break-word;
-  justify-content: space-between;
-}
-
-#navLinks a {
+  height: 20vh;
+  width: 96vw;
   color: black;
+  background-color: #2BA68D;
+  border-bottom-left-radius: 25px;
+}
+#bottomNav h1 {
+  flex-grow: 6;
+  align-content: center;
+  text-align: center;
+  margin: 25px;
+  overflow: auto;
+}
+
+
+
+
+#navLinks {
+  position: relative;
+  margin-top: 55px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2;
+  flex-shrink: 2;
+  background-color: #A62B44;
+  backdrop-filter: blur(10px);
+  border-top-left-radius: 25px;
+  border-color:rgba(255, 255, 255, 0.794);
+}
+
+#navLinks:after {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 30px;
+  display: block;
+  margin: auto;
+  bottom: -30px;
+  right: 0;
+  background-color: #A62B44;
+  transition: width 0.5s ease;
+  border-bottom-left-radius: 25px;
+}
+
+#navLinks:hover:after {
+  width: 100vw;
+}
+#navLinks a {
+  color: white;
   text-decoration: none;
   background-color: rgba(103, 0, 0, 0);
   backdrop-filter: blur;
   border-color:rgb(255, 255, 255);
-  border-width: 10px;  padding: 16px;
-  text-align: center;
-  padding-bottom: 25px;
-  padding-top: 25px;
-  border-radius: 7%;
+  border-width: 10px;  
+  align-content: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
-#navLinks a:hover {
-  background-color: rgba(103, 0, 0, 0.441);
+/*#navLinks a:hover {
+  background-color: rgba(255, 255, 255, 0.441);
   backdrop-filter: blur;
   border-radius: 10px;
   box-shadow: 1px 1px 10px black;
   border-color:rgba(255, 255, 255, 0.794);
-  border-width: 10px;}
-
-#navContent {
-  flex-grow: 3;
-  flex-shrink: 1;
-  padding: 15px;
-  overflow-wrap: break-word;
-}
+  border-width: 10px;
+  color: black;
+}*/
 button {
   border-radius: 8px;
   border: 1px solid transparent;
