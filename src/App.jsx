@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import LOGO from './assets/LOGO.svg'
 import LOGOpic from './assets/logopic.jpeg'
-import './App.css'
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,24 +9,25 @@ import Concerts from "./pages/Concerts";
 
 function App() {
   return (
-    <>
-     <div id="bottomNav">
-        <h1>The County Chamber Collective</h1>
-      <Router className="container">
-          <nav>
-            <Link to="/">Home</Link> |{" "}
-            <Link to="/events">Upcoming Events</Link> |{" "}
-            <Link to="/about">About</Link> |{" "}
-          </nav>
-
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/concerts" element={<Concerts />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </Router>
+    <Router>
+      <div id="bottomNav">
+        <img src={LOGO} alt="County Chamber Collective Logo" />
+        <h1 id="navContent">The County Chamber Collective</h1>
+        <nav id="navLinks">
+          <Link to="/">Home</Link>{" "}
+          <Link to="/concerts">Concerts</Link>{" "}
+          <Link to="/about">About</Link>{" "}
+        </nav>
       </div>
-    </>
+
+      <div id="mainContent">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/concerts" element={<Concerts />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
