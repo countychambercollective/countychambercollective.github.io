@@ -1,0 +1,76 @@
+/* ==========================
+   FLEX CONTAINER
+   ========================== */
+.stairs.fill {
+  display: flex;
+  flex-direction: column;       /* vertical stacking */
+  container-type: inline-size;
+  flex: 1 1 auto;
+  overflow-x: hidden;  /* allow horizontal overlap */
+  overflow-y: hidden;  /* allow vertical overlap */
+  gap: 0;               /* remove extra spacing */
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  line-height: .2;
+  top: 0; left: 0;
+  margin: 25px;
+  margin-bottom: 25px;
+  padding-top: 55px;
+  padding-left: 55px; 
+  color: white;
+background-image: url("src/assets/IMG_4202.JPG.png");
+  background-size: contain;
+  border-radius: 25px;
+}
+  
+
+
+/* ==========================
+   EACH STAIR ITEM
+   ========================== */
+.stair {
+  white-space: nowrap;      /* prevent wrapping */
+  font-size: clamp(1rem, 10cqw, 5rem); /* responsive font size */
+  display: block;
+  background-color: #7A92A5;
+  opacity: 0;
+  border-radius: 15px;
+  padding: 40px;
+
+  /* horizontal and vertical offsets */
+  transform: translate(
+    calc((var(--i) / var(--count)) * 50%), /* horizontal */
+    calc(var(--i) * 0.5em)                 /* vertical overlap step */
+  );
+  margin-top: -0.2em;  /* overlap slightly with previous line */
+  animation: stairIn 0.6s ease forwards;
+  animation-delay: calc(var(--i) * 0.12s);
+  position: relative;
+  z-index: calc(var(--count) - var(--i)); /* higher items above lower ones */
+}
+
+.stair:after {
+    content: "";
+    position: absolute;
+    
+}
+/* ==========================
+   ANIMATION
+   ========================== */
+@keyframes stairIn {
+  from {
+    opacity: 0;
+    transform: translate(
+      calc((var(--i) / var(--count)) * 50%),
+      calc(var(--i) * 0.5em - 6px) /* start slightly above */
+    );
+  }
+  to {
+    opacity: 1;
+    transform: translate(
+      calc((var(--i) / var(--count)) * 50%),
+      calc(var(--i) * 0.5em)
+    );
+  }
+}
