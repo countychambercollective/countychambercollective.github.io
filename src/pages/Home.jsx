@@ -11,6 +11,12 @@ function Home() {
                    words={["The", "County", "Chamber", "Collective", ]}
                      />
             </div>
+
+            <div id="subtitle">
+            
+            <p>A group of musicians bringing small ensemble, accessible music to Prince Edward County</p>
+
+            </div>
         </>
     ) 
 }
