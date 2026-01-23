@@ -11,10 +11,9 @@ function Concerts({ concerts = concertData }) {
         <ul className="concerts-list">
           {concerts.map((concert, index) => (
             <li key={index} className="concert-item">
-              {/* Poster */}
               {concert.poster && (
                 <img
-                  src={concert.poster} // public folder path, e.g. /posters/concert1.jpg
+                  src={concert.poster} 
                   alt={`${concert.venue} poster`}
                   className="concert-poster"
                 />

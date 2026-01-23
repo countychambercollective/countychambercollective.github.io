@@ -9,7 +9,7 @@ function Contact() {
         Contact Us
       </h1>
 
-      {/* Instagram Link */}
+      /* Instagram Link */
       <div style={{ textAlign: "center", marginBottom: "2rem" }}>
         <a
           href="https://www.instagram.com/countychambercollective"
