@@ -5,7 +5,7 @@ const concertData = [
     venue: "St. Mary Magdalene",
     address: "335 Picton Main St. East",
     /*link: ""*/
-    poster: "/posters/SMMposter.jpeg"
+    poster: "./posters/SMMposter.jpeg"
   },
  
 ];

@@ -51,6 +51,10 @@
   margin: 0 auto;
 }
 
+.email-form input {
+  color: black;
+}
+
 .email-form input,
 .email-form textarea,
 .email-form button {
