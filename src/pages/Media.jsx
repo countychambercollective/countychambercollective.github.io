@@ -1,14 +1,18 @@
 import React from "react";
 
-function Media() {
-    return (
-        <>
-            <div>
-                <h1>Media Coming Soon </h1>
+export default function Media() {
+  return (
+    <div className="media-page">
+      <header>
+        <h1>Media Gallery 📸</h1>
+      </header>
 
-            </div>
-        </>
-    ) 
+      <main className="media-grid">
+        {/* Example media items — replace with your actual media */}
+        <img src="/media/photo1.jpg" alt="Media 1" />
+        <img src="/media/photo2.jpg" alt="Media 2" />
+        <img src="/media/photo3.jpg" alt="Media 3" />
+      </main>
+    </div>
+  );
 }
-
-export default Media;

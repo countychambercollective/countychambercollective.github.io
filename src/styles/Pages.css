@@ -1,0 +1,188 @@
+/* ==============================
+   Global & Utility
+   ============================== */
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+    font-size: clamp(1rem, 3.5cqw, 4rem); /* responsive font size to reuse*/
+}
+
+
+/* ==============================
+   Media Page
+   ============================== */
+.media-page {
+  padding: 2rem;
+    width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.media-grid {
+  display: grid;
+  gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+
+}
+
+.media-grid img {
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================
+   Members / Alternating Layout
+   ============================== */
+
+.members-page {
+  position: relative;
+  padding: 30px;
+  width: 100%;
+}
+
+.members-page header {
+    font-size: clamp(1rem, 3.5cqw, 4rem); /* responsive font size to reuse*/
+
+}
+.members-list {
+  max-width: 100%;
+  flex-direction: row;
+  background: #7A92A5;
+  padding: 20px;
+  border-radius: 25px;
+  position: relative;
+  anchor-name: --listAnchor;
+}
+
+.members-list p {
+  text-align: justify;
+  color: white;
+  font-size: clamp(1rem, 3.5cqw, 4rem); /* responsive font size to reuse*/
+  padding-inline: 1rem;
+  margin-block: 1rem;
+  margin-bottom: 1rem;
+}
+
+.members-list h2 {
+  color: white;
+  line-height: 0.9;
+  margin: 0.2%;
+  text-align: center;
+  display:flex;
+  align-items: center;
+  font-size: 30px;
+  padding-bottom: 25px;
+  border-bottom: solid; 
+}
+
+.justifyRight {
+  text-align: right;
+  background-color: rgba(0,0,0,0.3);
+  padding: 25px;
+  border-radius: 25px;
+  margin-bottom: 10%;
+}
+
+.justifyLeft {
+  text-align: left;
+    background-color: rgba(0,0,0,0.3);
+  padding: 25px;
+  border-radius: 25px;
+  margin-bottom: 10%;
+}
+
+.members-list img {
+  max-width: 80%;
+  border-radius: 25px;
+  margin-top: 25px;
+}
+
+
+/* Stack on smaller screens */
+@media (max-width: 768px) {
+  .member-entry,
+  .member-entry.right-aligned {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ==============================
+   Concerts Integrated with Media/Members
+   (no separate .concert-* classes)
+   ============================== */
+
+/* Container for Concert Cards */
+.concerts-section {
+  margin-top: 2rem;
+  width: 100%;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+
+/* Individual Concert Card */
+.concert-card {
+  background-color: #6B705C;
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.concert-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Concert Poster */
+.concert-card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Concert Info */
+.concert-date {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.concert-location {
+  font-size: 1rem;
+}
+
+/* Concert Link styled like button */
+.concert-link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #7A92A5;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.concert-link:hover {
+  background-color: #556b75;
+}
+
+/* Empty state within media or members */
+.empty-state {
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  margin-top: 1.5rem;
+}

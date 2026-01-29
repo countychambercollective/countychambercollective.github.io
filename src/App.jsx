@@ -19,7 +19,7 @@ function App() {
           <Link to="/">Home</Link>{" "}
           <Link to="/concerts">Upcoming Concerts</Link>{" "}
           <Link to="/members">Current Members</Link>{" "}
-          <Link to="/media">Media</Link>{" "}
+          {/*<Link to="/media">Media</Link>{" "}*/}
           <Link to="/contact">Contact Us</Link>{" "}
 
         </nav>
@@ -31,7 +31,7 @@ function App() {
           <Route path="/concerts" element={<Concerts />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/members" element={<Members />} />
-          <Route path="/media" element={<Media />} />
+          {/*<Route path="/media" element={<Media />} />*/}
 
         </Routes>
       </div>

@@ -19,7 +19,7 @@
   line-height: 0.2;
   color: white;
 
-  background-image: url("/posters/groupPhoto.jpeg");
+  background-image: url("./posters/groupPhoto.jpeg");
   background-size: contain;
   border-radius: 25px;
 }

@@ -8,8 +8,6 @@ function Contact() {
       <h1 style={{ textAlign: "center", marginBottom: "1.5rem" }}>
         Contact Us
       </h1>
-
-      /* Instagram Link */
       <div style={{ textAlign: "center", marginBottom: "2rem" }}>
         <a
           href="https://www.instagram.com/countychambercollective"
