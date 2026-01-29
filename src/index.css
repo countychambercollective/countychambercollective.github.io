@@ -44,41 +44,39 @@ body {
 
 
 #bottomNav {
-  backdrop-filter: blur(9px);
-  border-width: 5px;
-
   position: relative;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: flex-end;
 
-  
-  height: 25vh;
-
-  color: black;
   background-color: #6B705C;
+  color: black;
 
+  height: 25vh;
   padding-bottom: env(safe-area-inset-bottom);
+  backdrop-filter: blur(9px);
+
 }
 
 #bottomNav h1 {
-  flex-grow: 6;
-  align-content: center;
+  flex-grow: 1;
   text-align: center;
-  margin: 25px;
-  overflow: auto;
+  margin: 0;
   color: white;
 }
 
 #bottomNav img {
   filter: invert(100);
+  max-height: 60px;
+  margin-left: 1rem;
 }
 
 #navLinks {
-  position: relative;
-  margin-top: 55px;
-
   display: flex;
+  position: relative;
+  margin-right: 1rem;
+  gap: 1rem;
   flex-direction: row;
   flex-grow: 2;
   flex-shrink: 2;
@@ -155,4 +153,31 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (max-width: 768px) {
+  #bottomNav {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    height: auto;          /* stop forcing 25vh */
+    padding: 1rem 0;
+  }
+
+  /* Logo + title stack on top */
+  #bottomNav img,
+  #bottomNav h1 {
+    order: 1;
+    margin: 0.5rem auto;
+    text-align: center;
+  }
+
+  /* Nav links below */
+  #navLinks {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
 }

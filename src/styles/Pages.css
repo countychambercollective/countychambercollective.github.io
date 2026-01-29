@@ -45,6 +45,7 @@ h1 {
   position: relative;
   padding: 30px;
   width: 100%;
+  list-style-type: none;
 }
 
 .members-page header {
@@ -62,7 +63,7 @@ h1 {
 }
 
 .members-list p {
-  text-align: justify;
+  text-align: left;
   color: white;
   font-size: clamp(1rem, 3.5cqw, 4rem); /* responsive font size to reuse*/
   padding-inline: 1rem;
@@ -80,6 +81,7 @@ h1 {
   font-size: 30px;
   padding-bottom: 25px;
   border-bottom: solid; 
+  overflow-wrap: break-word;
 }
 
 .justifyRight {
