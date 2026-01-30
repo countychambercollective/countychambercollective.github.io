@@ -121,10 +121,10 @@ body {
 
   align-content: center;
   justify-content: space-between;
-
+  padding: 10px;
   margin-right: 10px;
   margin-left: 10px;
-  padding-top: 30px;
+  margin-top: 30px;
   flex-grow: 1;
 }
 
@@ -178,6 +178,6 @@ button:focus-visible {
     margin-top: 1rem;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    padding: 10px;
+    margin: 10px;
   }
 }
