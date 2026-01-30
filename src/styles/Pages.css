@@ -45,6 +45,9 @@ h1 {
   position: relative;
   padding: 30px;
   width: 100%;
+}
+
+ul {
   list-style-type: none;
 }
 
@@ -70,6 +73,7 @@ h1 {
   margin-block: 1rem;
   margin-bottom: 1rem;
 }
+
 
 .members-list h2 {
   color: white;

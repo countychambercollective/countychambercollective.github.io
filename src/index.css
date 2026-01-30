@@ -68,7 +68,6 @@ body {
 
 #bottomNav img {
   filter: invert(100);
-  max-height: 60px;
   margin-left: 1rem;
 }
 
@@ -80,7 +79,8 @@ body {
   flex-direction: row;
   flex-grow: 2;
   flex-shrink: 2;
-
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: #7A92A5;
   backdrop-filter: blur(10px);
 
