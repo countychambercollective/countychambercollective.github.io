@@ -14,7 +14,15 @@ export default function CurrentMembers() {
           <img src="../posters/Diana-Lam.jpg" alt="Diana Lam: Flute." />
           <p>Diana was Associate Performance Faculty at Carleton University, and is Suzuki trained and Keyfest certified. <br /> <br />Diana has recently performed with The Belleville Theatre Guild, ShatterBox Theatre, and the Kingston Symphony. She is also involved in several chamber music collaborations, runs her own private studio, and even works as a flute technician. <br /> <br />Diana moved to Prince Edward County in 2021, and, inspired by the El Sistema philosophy, founded Quintissimo with Amber Walton-Amar. Diana has a BMus and MMus degrees in Flute Performance.</p>
         </li>
+        <li>
+          <h2>Kiri-Christina Fill (violin)</h2>
+          <img src="../posters/Kiri-Fill.jpg" alt="Kiri-Christina Fill: Violin." />
+          <p>"Kiri is a passionate violin teacher and performer with 15 years of experience. Kiri started playing the violin at the age of 4 in Ottawa, ON, and grew up with the Suzuki method.
 
+Kiri’s impressive performance experience includes being the Concert Master of Canterbury High School and Queens University Orchestras, assistant Concert Master of the Santa Barbara City College Orchestra, and has had solo performances with orchestras at both College and University levels. Currently she performs with the Kingston Symphony Orchestra, and also enjoys playing at weddings and events throughout the year.
+
+<br /><br />In Kiri's spare time, she enjoys travel and the outdoors including but not limited to hiking & skiing.  She has a 1-year-old daughter who keeps her busy!"</p>
+        </li>
         <li className="justifyLeft">
           <h2>Caroline Reiss (viola)</h2>
           <img src="../posters/Caroline-Reiss.jpg" alt="Caroline Reiss: Viola" />
