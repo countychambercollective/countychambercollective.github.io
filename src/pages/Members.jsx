@@ -23,7 +23,7 @@ Kiri’s impressive performance experience includes being the Concert Master of 
 
 <br /><br />In Kiri's spare time, she enjoys travel and the outdoors including but not limited to hiking & skiing.  She has a 1-year-old daughter who keeps her busy!"</p>
         </li>
-        <li className="justifyLeft">
+        <li>
           <h2>Caroline Reiss (viola)</h2>
           <img src="../posters/Caroline-Reiss.jpg" alt="Caroline Reiss: Viola" />
           <p>Caroline is an avid violist who is passionate about classical music and bringing music to everyone, especially youth. She particularly enjoys playing Baroque music. 
@@ -45,7 +45,7 @@ to collaborate with local musicians.</p>
         </li>
 
         <li className="justifyLeft">
-          <h2>Vi Woo (violin/piano/arrangements)</h2>
+          <h2>Vi Woo (violin/piano)</h2>
           <img src="../posters/Vi-Woo.jpg" alt="Vi Woo: Piano, Violin, Arrangements" />
           <p> Vi is a musician and accessibility specialist. They have a bachelors of music from McGill and digital accessibility specialization from Mohawk College. Their work focuses on bringing music and art in an accessible and comfortable format. 
           <br /> <br />
