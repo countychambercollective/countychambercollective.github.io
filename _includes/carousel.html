@@ -1,0 +1,6 @@
+{%- assign label = include.label | default: "Carousel" -%}
+<div class="carousel-container"{% if include.id %} id="{{ include.id }}"{% endif %}>
+    <ul class="carousel{% if include.class %} {{ include.class }}{% endif %}" data-carousel aria-roledescription="carousel" aria-label="{{ label }}">
+        {{ include.slides }}
+    </ul>
+</div>
