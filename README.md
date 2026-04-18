@@ -1,14 +1,28 @@
-# Creative Theme for Jekyll
+# countychambercollective.ca
 
-A Jekyll implementation of the [Creative Theme](http://startbootstrap.com/template-overviews/creative/) template by [Start Bootstrap](http://startbootstrap.com).
+Source for [countychambercollective.ca](https://countychambercollective.ca) — a one-page Jekyll site for the County Chamber Collective.
 
-Creative is a one page Bootstrap theme for creatives, small businesses, and other multipurpose uses.
-The theme includes a number of rich features and plugins that you can use as a great boilerplate for your next Jekyll project! 
+Based on the [Creative Theme](http://startbootstrap.com/template-overviews/creative/) by Start Bootstrap.
 
-See it live in action at <https://volny.github.io/creative-theme-jekyll/>
+## Running locally
 
-## To use the Creative Theme template in your project
+Requires Ruby 3.3+.
 
-- Start by adding your info in `_config.yml`
-- In `_layouts/front.html` reorder or remove section as you prefer.
+```sh
+bundle install
+bundle exec jekyll serve
+```
 
+Site is served at <http://localhost:4000>. Changes to `_includes/`, `_layouts/`, and `_sass/` rebuild automatically.
+
+## Structure
+
+- `index.html` — entry page, uses the `front` layout
+- `_layouts/front.html` — page shell, stitches includes together
+- `_includes/` — section partials (nav, header, about, services, audioclips, portfolio, call-to-action, contact, head, scripts)
+- `_sass/_base.scss` — site styles
+- `img/`, `css/`, `js/`, `docs/`, `fonts/` — static assets
+
+## Deployment
+
+Pushes to `main` auto-deploy via GitHub Actions (`.github/workflows/jekyll.yml`) to GitHub Pages.

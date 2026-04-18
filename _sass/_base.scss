@@ -262,6 +262,8 @@ header {
             .project-name {
                 @include sans-serif-font;
                 padding: 0 15px;
+                margin: 0;
+                font-weight: 600;
             }
             .project-category {
                 text-transform: uppercase;
@@ -399,7 +401,6 @@ body {
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  anchor-name: --carousel;
 
   /* Hide the scrollbar visually */
   scrollbar-width: none;
@@ -415,8 +416,7 @@ body {
 
   /* ── Shared button styles ── */
   &::scroll-button(*) {
-    position: fixed;
-    position-anchor: --carousel;
+    position: absolute;
 
     /* Size & shape */
     width: 2.75rem;
@@ -508,6 +508,10 @@ body {
 }
 
 // Member carousel
+.members-carousel img {
+    height: auto;
+}
+
 .member-name {
     color: #0097b2;
     font-size: xx-large;
