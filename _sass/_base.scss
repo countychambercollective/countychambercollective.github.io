@@ -500,3 +500,20 @@ body {
   box-shadow: 0 6px 20px rgba(0,151,178,0.35);
 }
 .btn:active { transform: scale(0.97); }
+
+// Audio clips
+.audio-clip {
+    audio { margin: 15px; }
+    .audio-caption { text-align: right; }
+}
+
+// Member carousel
+.member-name {
+    color: #0097b2;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.footer-credit {
+    opacity: 0.5;
+}
