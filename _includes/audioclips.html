@@ -7,8 +7,7 @@
             </div>
         </div>
     </div>
-    <div class="carousel-container">
-        <ul class="carousel">
+    {% capture audio_slides %}
             <li id="audio-slide-1" class="audio-clip">
                 <img src="/img/loveicon.png" width="200" height="200" alt="" aria-hidden="true">
                 <audio controls>
@@ -33,6 +32,6 @@
                 </audio>
                 <p class="audio-caption">What's the hottest party theme? <cite>Golden!</cite> (we know your kids love it)</p>
             </li>
-        </ul>
-    </div>
+    {% endcapture %}
+    {% include carousel.html label="Audio clips" slides=audio_slides %}
 </section>

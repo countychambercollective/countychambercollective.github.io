@@ -26,45 +26,44 @@
                 </a>
             </div>
 
-            <div class="carousel-container">
-                <ul class="carousel members-carousel">
+            {% capture member_slides %}
                     <li id="member-slide-1">
                         <picture>
                             <source type="image/webp" srcset="/img/members/diana.webp">
-                            <img src="/img/members/diana.jpg" width="600" height="1050" loading="lazy" alt="Portrait of Diana Lam">
+                            <img src="/img/members/diana.jpg" width="600" height="1050" sizes="(max-width: 768px) 80vw, 400px" loading="lazy" alt="Portrait of Diana Lam">
                         </picture>
                         <p class="member-name">Diana Lam</p>
                     </li>
                     <li id="member-slide-2">
                         <picture>
                             <source type="image/webp" srcset="/img/members/caro.webp">
-                            <img src="/img/members/caro.jpg" width="600" height="1050" loading="lazy" alt="Portrait of Caro Reiss">
+                            <img src="/img/members/caro.jpg" width="600" height="1050" sizes="(max-width: 768px) 80vw, 400px" loading="lazy" alt="Portrait of Caro Reiss">
                         </picture>
                         <p class="member-name">Caro Reiss</p>
                     </li>
                     <li id="member-slide-3">
                         <picture>
                             <source type="image/webp" srcset="/img/members/vi.webp">
-                            <img src="/img/members/vi.jpg" width="600" height="1050" loading="lazy" alt="Portrait of Vi Woo">
+                            <img src="/img/members/vi.jpg" width="600" height="1050" sizes="(max-width: 768px) 80vw, 400px" loading="lazy" alt="Portrait of Vi Woo">
                         </picture>
                         <p class="member-name">Vi Woo</p>
                     </li>
                     <li id="member-slide-4">
                         <picture>
                             <source type="image/webp" srcset="/img/members/liz.webp">
-                            <img src="/img/members/liz.jpg" width="600" height="1050" loading="lazy" alt="Portrait of Liz Tremblay">
+                            <img src="/img/members/liz.jpg" width="600" height="1050" sizes="(max-width: 768px) 80vw, 400px" loading="lazy" alt="Portrait of Liz Tremblay">
                         </picture>
                         <p class="member-name">Liz Tremblay</p>
                     </li>
                     <li id="member-slide-5">
                         <picture>
                             <source type="image/webp" srcset="/img/members/kiri.webp">
-                            <img src="/img/members/kiri.jpg" width="600" height="1050" loading="lazy" alt="Portrait of Kiri-Christina Fill">
+                            <img src="/img/members/kiri.jpg" width="600" height="1050" sizes="(max-width: 768px) 80vw, 400px" loading="lazy" alt="Portrait of Kiri-Christina Fill">
                         </picture>
                         <p class="member-name">Kiri-Christina Fill</p>
                     </li>
-                </ul>
-            </div>
+            {% endcapture %}
+            {% include carousel.html label="Chamber Collective members" class="members-carousel" slides=member_slides %}
 
             <p class="col-lg-8 col-lg-offset-2 text-center footer-credit">Web Design: Vi Woo</p>
         </div>

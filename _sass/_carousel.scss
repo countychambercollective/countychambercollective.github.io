@@ -1,0 +1,169 @@
+// Horizontal scroll-snap carousel.
+//
+// Markup pattern (see _includes/carousel.html):
+//   <div class="carousel-container">
+//     <button class="carousel-btn carousel-btn--prev">…</button>   // injected by carousel.js
+//     <ul class="carousel [variant-class]" data-carousel aria-roledescription="carousel" aria-label="…">
+//       <li> … slide content … </li>
+//     </ul>
+//     <button class="carousel-btn carousel-btn--next">…</button>   // injected by carousel.js
+//   </div>
+//
+// Variants override the defaults below with the custom properties, e.g.:
+//   .members-carousel { --carousel-slide-max-height: 60vh; }
+
+.carousel-container {
+    --carousel-border-color: #0097b2;
+    --carousel-border-width: 10px;
+    --carousel-border-radius: 25px;
+    --carousel-padding: 2rem;
+    --carousel-gap: 1rem;
+    --carousel-button-size: 2.75rem;
+    --carousel-button-inset: 1rem;
+    // On mobile, reveal a sliver of the next slide to hint scrollability.
+    --carousel-slide-width: 100%;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin-inline: auto;
+    // Reserve space for overlay buttons so they don't cover slide content.
+    padding-inline: calc(var(--carousel-button-size) + var(--carousel-button-inset));
+
+    @media (max-width: 768px) {
+        --carousel-border-width: 4px;
+        --carousel-border-radius: 16px;
+        --carousel-padding: 1rem;
+        --carousel-button-size: 2.25rem;
+        --carousel-button-inset: 0.25rem;
+        --carousel-slide-width: 88%; // peek next slide
+        margin-block: 1rem;
+    }
+}
+
+.carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: var(--carousel-slide-width);
+    gap: var(--carousel-gap);
+    width: 100%;
+    margin: 0;
+    padding: var(--carousel-padding);
+    list-style: none;
+    border: var(--carousel-border-width) solid var(--carousel-border-color);
+    border-radius: var(--carousel-border-radius);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-inline: var(--carousel-padding);
+
+    // Hide scrollbar visually; keyboard + buttons handle navigation.
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
+
+    // Remove default focus ring only when the JS upgrade has run
+    // (it assigns tabindex so the container is focusable for arrow keys).
+    &:focus-visible {
+        outline: 2px solid var(--carousel-border-color);
+        outline-offset: 4px;
+    }
+
+    > li {
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 0; // allow children to shrink below intrinsic width
+        text-align: center;
+    }
+
+    // Universal safeguard so no slide content blows past its column.
+    img, picture, video, audio {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        scroll-behavior: auto;
+    }
+}
+
+// ── Navigation buttons (injected by carousel.js) ────────────────
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    z-index: 2;
+    display: inline-grid;
+    place-items: center;
+    width: var(--carousel-button-size);
+    height: var(--carousel-button-size);
+    padding: 0;
+    border-radius: 50%;
+    border: 4px solid var(--carousel-border-color);
+    background: oklch(98% 0 0 / 0.9);
+    box-shadow: 0 2px 12px oklch(0% 0 0 / 0.12);
+    color: var(--carousel-border-color);
+    cursor: pointer;
+    font-size: calc(var(--carousel-button-size) * 0.6);
+    line-height: 1;
+    transition: background 0.2s, box-shadow 0.2s, scale 0.15s, opacity 0.2s;
+
+    &:hover:not(:disabled) {
+        background: oklch(100% 0 0);
+        box-shadow: 0 4px 20px oklch(0% 0 0 / 0.18);
+        scale: 1.08;
+    }
+
+    &:active:not(:disabled) {
+        scale: 0.95;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--carousel-border-color);
+        outline-offset: 2px;
+    }
+
+    &:disabled {
+        opacity: 0.25;
+        cursor: not-allowed;
+    }
+
+    &--prev { left: 0; }
+    &--next { right: 0; }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+        &:hover:not(:disabled), &:active:not(:disabled) { scale: 1; }
+    }
+}
+
+// ── Slide variants ──────────────────────────────────────────────
+.audio-clip {
+    gap: 0.75rem;
+
+    audio { width: 100%; max-width: 320px; }
+    .audio-caption { text-align: center; }
+}
+
+.members-carousel {
+    --carousel-slide-max-height: 60vh;
+
+    img {
+        // Tall portraits: cap height so they don't dominate on desktop.
+        max-height: var(--carousel-slide-max-height);
+        object-fit: contain;
+    }
+}
+
+.member-name {
+    color: #0097b2;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: bold;
+    margin-top: 0.75rem;
+}

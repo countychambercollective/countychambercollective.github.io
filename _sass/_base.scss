@@ -386,103 +386,6 @@ img::-moz-selection {
 body {
     -webkit-tap-highlight-color: $theme-dark;
 }
-.carousel-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin-inline: auto;
-  padding-inline: 3rem;
-}
-.carousel {
-  display: grid;
-  margin: 3rem;
-  padding: 2rem;
-  border: solid;
-  border-radius: 25px;
-  border-width: 10px;
-  border-color:#0097b2;
-  grid-auto-flow: column;
-  grid-auto-columns: 100%;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-
-  /* Hide the scrollbar visually */
-  scrollbar-width: none;
-  &::-webkit-scrollbar { display: none; }
-
-  > li {
-    scroll-snap-align: center;
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* ── Shared button styles ── */
-  &::scroll-button(*) {
-    position: absolute;
-
-    /* Size & shape */
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 50%;
-    border: 10px solid #0097b2;
-
-    /* Appearance */
-    background: oklch(98% 0 0 / 0.85);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 2px 12px oklch(0% 0 0 / 0.12);
-    cursor: pointer;
-
-    /* Keep image inside the button */
-    object-fit: contain;
-    padding: 0.5rem;
-
-    /* Transitions */
-    transition:
-      background 0.2s ease,
-      border-color 0.2s ease,
-      box-shadow 0.2s ease,
-      scale 0.15s ease;
-  }
-
-  &::scroll-button(*):hover {
-    background: oklch(100% 0 0);
-    border-color: oklch(50% 0 0 / 0.4);
-    box-shadow: 0 4px 20px oklch(0% 0 0 / 0.18);
-    scale: 1.08;
-  }
-
-  &::scroll-button(*):active {
-    scale: 0.95;
-    box-shadow: 0 1px 6px oklch(0% 0 0 / 0.1);
-  }
-
-  /* Dim when no more slides to scroll to */
-  &::scroll-button(*):disabled {
-    opacity: 0.25;
-    cursor: not-allowed;
-    scale: 1;
-  }
-
-  /* ── Left button ── */
-  &::scroll-button(inline-start) {
-    position-area: inline-start center;
-    content: url('img/arrowleft.png') / attr(data-previous);
-  }
-
-  /* ── Right button ── */
-  &::scroll-button(inline-end) {
-    position-area: inline-end center;
-    content: url('img/arrowright.png') / attr(data-next);
-  }
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -509,23 +412,6 @@ body {
   box-shadow: 0 6px 20px rgba(0,151,178,0.35);
 }
 .btn:active { transform: scale(0.97); }
-
-// Audio clips
-.audio-clip {
-    audio { margin: 15px; }
-    .audio-caption { text-align: right; }
-}
-
-// Member carousel
-.members-carousel img {
-    height: auto;
-}
-
-.member-name {
-    color: #0097b2;
-    font-size: xx-large;
-    font-weight: bold;
-}
 
 .footer-credit {
     opacity: 0.5;
