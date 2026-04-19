@@ -83,7 +83,11 @@
     }
 
     // Universal safeguard so no slide content blows past its column.
-    img, picture, video, audio {
+    // NOTE: <audio> is intentionally excluded. Chrome renders <audio controls>
+    // as a replaced element with no intrinsic content height, so `height: auto`
+    // collapses the control bar to ~0px and the play button becomes unclickable.
+    // Audio sizing lives in the .audio-clip variant below.
+    img, picture, video {
         max-width: 100%;
         height: auto;
     }
