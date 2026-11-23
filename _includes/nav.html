@@ -1,3 +1,7 @@
+{%- comment -%}
+    On the home page the links scroll within the page; on other pages they point back to the home page sections.
+{% endcomment -%}
+{%- if page.url == "/" or page.url == "/index.html" %}{% assign home = "" %}{% else %}{% assign home = "/" %}{% endif -%}
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" aria-label="Primary">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -7,22 +11,25 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">County Chamber Collective</a>
+            <a class="navbar-brand page-scroll" href="{% if home == '' %}#page-top{% else %}/{% endif %}">County Chamber Collective</a>
         </div>
 
         <div class="collapse navbar-collapse" id="primary-nav">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <a class="page-scroll" href="{{ home }}#about">About</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">Services</a>
+                    <a class="page-scroll" href="{{ home }}#services">Services</a>
+                </li>
+                <li{% if page.url == "/retreat/" %} class="active"{% endif %}>
+                    <a href="/retreat/"{% if page.url == "/retreat/" %} aria-current="page"{% endif %}>Retreat</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#portfolio">Book Now</a>
+                    <a class="page-scroll" href="{{ home }}#portfolio">Book Now</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
+                    <a class="page-scroll" href="{{ home }}#contact">Contact</a>
                 </li>
             </ul>
         </div>

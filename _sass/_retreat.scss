@@ -1,0 +1,177 @@
+// Retreat page (/retreat/)
+
+.retreat-hero {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 130px 0 90px;
+    h1 {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+        font-size: clamp(34px, 7vw, 60px);
+        line-height: 1.1;
+    }
+    hr {
+        margin: 28px auto;
+    }
+    .retreat-dates {
+        @include sans-serif-font;
+        font-size: clamp(20px, 3.5vw, 28px);
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+    .retreat-location {
+        font-size: 18px;
+        color: rgba(white, .75);
+        margin-bottom: 36px;
+    }
+    @media (min-width: 768px) {
+        padding: 170px 0 120px;
+    }
+}
+
+.retreat-eyebrow {
+    @include sans-serif-font;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0097b2;
+    margin-bottom: 12px;
+}
+
+.retreat-hero .retreat-eyebrow {
+    color: #4fd1e8;
+}
+
+.retreat-section {
+    padding: 80px 0;
+}
+
+.retreat-prose {
+    max-width: 720px;
+    margin: 0 auto;
+    p {
+        font-size: 17px;
+        line-height: 1.75;
+    }
+    .section-heading {
+        line-height: 1.25;
+    }
+}
+
+.retreat-lead {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+    color: $theme-dark;
+}
+
+.retreat-callout {
+    @include sans-serif-font;
+    font-size: 22px !important;
+    font-weight: 700;
+    color: #975ab6;
+    border-left: 4px solid #0097b2;
+    padding: 6px 0 6px 20px;
+    margin: 36px 0;
+}
+
+hr.retreat-hr-left {
+    margin: 20px 0 30px;
+}
+
+hr.primary {
+    border-color: #0097b2;
+}
+
+.retreat-concert {
+    padding: 80px 0;
+}
+
+.retreat-concert-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
+    }
+}
+
+.retreat-poster {
+    width: 100%;
+    max-width: 420px;
+    flex: 0 0 auto;
+    img {
+        border-radius: 8px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, .5);
+    }
+    @media (min-width: 768px) {
+        width: 42%;
+    }
+}
+
+.retreat-concert-details {
+    flex: 1 1 auto;
+    .section-heading {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .retreat-concert-when {
+        @include sans-serif-font;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+    .retreat-concert-where {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+}
+
+.retreat-works {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto 40px;
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    li {
+        background: #f6f6ee;
+        border-top: 4px solid #0097b2;
+        border-radius: 6px;
+        padding: 22px 20px;
+        text-align: center;
+    }
+    .retreat-work-composer {
+        @include sans-serif-font;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        font-size: 13px;
+        font-weight: 700;
+        color: #975ab6;
+        margin-bottom: 6px;
+    }
+    .retreat-work-title {
+        display: block;
+        font-size: 22px;
+        font-style: italic;
+        color: $theme-dark;
+    }
+}
+
+.retreat-cta {
+    padding: 70px 0;
+    color: white;
+    h2 {
+        margin: 0 auto 24px;
+    }
+}
